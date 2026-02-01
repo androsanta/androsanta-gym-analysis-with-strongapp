@@ -3,7 +3,6 @@ import * as dateFns from "date-fns";
 import { config } from "../config";
 import {
   Cell,
-  CellSet,
   CellType,
   Log,
   LoginResponse,

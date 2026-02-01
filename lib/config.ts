@@ -15,12 +15,15 @@ const internalConfig = {
 
 enum ExpectedEnvFields {
   SHEET_ID = "SHEET_ID",
+  WORKOUT_SHEET_NAME = "WORKOUT_SHEET_NAME",
+  DATASET1_SHEET_NAME = "DATASET1_SHEET_NAME",
+  DATASET2_SHEET_NAME = "DATASET2_SHEET_NAME",
   STRONG_USERNAME = "STRONG_USERNAME",
   STRONG_PASSWORD = "STRONG_PASSWORD",
   STRONG_BASE_PATH = "STRONG_BASE_PATH",
 }
 
-dotEnv.config({ path: `${configPath}/user_config` });
+dotEnv.config({ path: `${configPath}/user_config`, quiet: true });
 
 const envConfig: { [value in ExpectedEnvFields]: string } = Object.values(
   ExpectedEnvFields

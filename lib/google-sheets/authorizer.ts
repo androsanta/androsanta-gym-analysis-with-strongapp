@@ -19,7 +19,7 @@ export const createAuth = async () => {
 export type OAuth2Client = typeof GoogleApis.prototype.auth.OAuth2.prototype;
 
 async function createOAuth2Client(credentials: any) {
-  const { client_secret, client_id, redirect_uris } = credentials.installed;
+  const { client_secret, client_id, redirect_uris } = credentials.web;
   const oAuth2Client = new google.auth.OAuth2(
     client_id,
     client_secret,
