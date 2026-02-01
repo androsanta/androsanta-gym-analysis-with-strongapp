@@ -4,7 +4,9 @@
   "type": "module",
   "scripts": {
     "start": "bun run lib/index.ts",
-    "start-local": "GYM_ANALYSIS_LOCAL=true bun run lib/index.ts"
+    "start-local": "GYM_ANALYSIS_LOCAL=true bun run lib/index.ts",
+    "start-cron": "bun run lib/cron/index.ts",
+    "build-cron": "bun build -b --target bun --outfile dist/out -i lib/cron/index.ts"
   },
   "devDependencies": {
     "@types/lodash": "^4.17.23",
@@ -18,6 +20,7 @@
     "dotenv": "^17.2.3",
     "googleapis": "^170.1.0",
     "lodash": "^4.17.23",
+    "node-cron": "^4.2.1",
     "prompts": "^2.4.2"
   }
 }
