@@ -6,7 +6,7 @@
     "start": "bun run lib/index.ts",
     "start-local": "GYM_ANALYSIS_LOCAL=true bun run lib/index.ts",
     "start-cron": "bun run lib/cron/index.ts",
-    "build-cron": "bun build -b --target bun --outfile dist/out -i lib/cron/index.ts"
+    "build-cron": "bun build --compile -b --target bun --outfile dist/out lib/cron/index.ts"
   },
   "devDependencies": {
     "@types/lodash": "^4.17.23",
